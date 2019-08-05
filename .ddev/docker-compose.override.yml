@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  web:
+    volumes:
+      # mount composer cache
+      - ~/.composer/cache:/home/application/.composer/cache
+    environment:
+      - TYPO3_CONTEXT=Development/Local
