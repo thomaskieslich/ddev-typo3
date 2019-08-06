@@ -1,0 +1,24 @@
+version: '3.6'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: ddev-${DDEV_SITENAME}-mysql
+    volumes:
+      - ./data/mysql/:/var/lib/mysql:delegated
+    ports:
+      - 127.0.0.1:13306:3306
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: db
+      MYSQL_PASSWORD: db
+      MYSQL_ROOT_PASSWORD: root
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.9
+    container_name: ddev-${DDEV_SITENAME}-phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=mysql
