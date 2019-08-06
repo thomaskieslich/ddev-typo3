@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3de7e3dfe3c555cd8340adc4bc806a68",
+    "content-hash": "0df783fd5ea7b0a3452cdc8b78e8cff2",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -833,61 +833,6 @@
             "time": "2019-05-30T14:58:15+00:00"
         },
         {
-            "name": "helhum/typo3-composer-setup",
-            "version": "v0.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/helhum/typo3-composer-setup.git",
-                "reference": "d8a7db5fc160bd652aae2837b324b26f7b5ed6d4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/helhum/typo3-composer-setup/zipball/d8a7db5fc160bd652aae2837b324b26f7b5ed6d4",
-                "reference": "d8a7db5fc160bd652aae2837b324b26f7b5ed6d4",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-composer-installers": "^1.4 || ^2.0",
-                "typo3/minimal": "^7 || ^8 || ^9"
-            },
-            "require-dev": {
-                "typo3-console/php-server-command": "^0.1.0",
-                "typo3/cms-core": "^8.7.10 || ^9.5.2"
-            },
-            "suggest": {
-                "helhum/typo3-console": "TYPO3 Console is highly recommended for any TYPO3 composer setup.",
-                "pagemachine/typo3-composer-legacy-cli ": "Provides the legacy cli_dispatch.phpsh entry point for TYPO3."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                },
-                "typo3/cms": {
-                    "web-dir": "public"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Helhum\\Typo3ComposerSetup\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Helmut Hummel",
-                    "email": "info@helhum.io",
-                    "homepage": "https://helhum.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Set up required entry points for TYPO3 web directory",
-            "time": "2018-12-16T11:45:46+00:00"
-        },
-        {
             "name": "helhum/typo3-console",
             "version": "v5.7.0",
             "source": {
@@ -1033,60 +978,6 @@
                 "typo3 console"
             ],
             "time": "2018-12-09T12:06:13+00:00"
-        },
-        {
-            "name": "helhum/typo3-secure-web",
-            "version": "v0.2.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/helhum/typo3-secure-web.git",
-                "reference": "da2c4c61199ee7b4c8b4a2a8c5f3d3d049eeb393"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/helhum/typo3-secure-web/zipball/da2c4c61199ee7b4c8b4a2a8c5f3d3d049eeb393",
-                "reference": "da2c4c61199ee7b4c8b4a2a8c5f3d3d049eeb393",
-                "shasum": ""
-            },
-            "require": {
-                "helhum/typo3-composer-setup": "^0.5.4",
-                "typo3/cms-composer-installers": "^1.4 || ^2.0"
-            },
-            "conflict": {
-                "helhum/typo3-composer-setup": "<0.5.4",
-                "typo3/cms": "<8.7.10",
-                "typo3/cms-core": "<8.7.10"
-            },
-            "require-dev": {
-                "typo3-console/php-server-command": "^0.1.0",
-                "typo3/cms-core": "^8.7.10 || ^9.5.2"
-            },
-            "type": "library",
-            "extra": {
-                "typo3/cms": {
-                    "root-dir": "private",
-                    "web-dir": "public"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Helhum\\Typo3SecureWeb\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Helmut Hummel",
-                    "role": "Developer",
-                    "email": "info@helhum.io",
-                    "homepage": "https://helhum.io"
-                }
-            ],
-            "description": "Set up secure TYPO3 web directory containing only public assets",
-            "time": "2019-05-30T15:24:17+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4467,56 +4358,6 @@
             "description": "Shows the frontend webpage inside the backend frameset.",
             "homepage": "https://typo3.org",
             "time": "2019-06-25T08:28:51+00:00"
-        },
-        {
-            "name": "typo3/minimal",
-            "version": "v9.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3/minimal.git",
-                "reference": "6ca773e3a90f193ef6cbac7be810d2e8eb6d06fc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/minimal/zipball/6ca773e3a90f193ef6cbac7be810d2e8eb6d06fc",
-                "reference": "6ca773e3a90f193ef6cbac7be810d2e8eb6d06fc",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-backend": "9.5.*@dev",
-                "typo3/cms-core": "9.5.*@dev",
-                "typo3/cms-extbase": "9.5.*@dev",
-                "typo3/cms-extensionmanager": "9.5.*@dev",
-                "typo3/cms-filelist": "9.5.*@dev",
-                "typo3/cms-fluid": "9.5.*@dev",
-                "typo3/cms-frontend": "9.5.*@dev",
-                "typo3/cms-install": "9.5.*@dev",
-                "typo3/cms-recordlist": "9.5.*@dev"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "9.5.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "The TYPO3 Community",
-                    "role": "Contributor",
-                    "homepage": "https://typo3.org/community/"
-                },
-                {
-                    "name": "TYPO3 CMS Core Team",
-                    "role": "Developer",
-                    "homepage": "https://forge.typo3.org/projects/typo3cms-core"
-                }
-            ],
-            "description": "Minimal required set of TYPO3 extensions",
-            "time": "2018-09-11T09:01:10+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
