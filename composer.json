@@ -17,6 +17,7 @@
   "require": {
     "helhum/typo3-console": "^5.7",
     "typo3/cms-introduction": "^4.0",
+    "apache-solr-for-typo3/solr": "^9.0",
 
     "typo3/cms-about": "^9.5",
     "typo3/cms-backend": "^9.5",

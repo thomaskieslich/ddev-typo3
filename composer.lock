@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0df783fd5ea7b0a3452cdc8b78e8cff2",
+    "content-hash": "3a2411b7ccf78dec64deb91b594d3bdb",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -54,6 +54,80 @@
                 "php"
             ],
             "time": "2016-06-19T18:08:43+00:00"
+        },
+        {
+            "name": "apache-solr-for-typo3/solr",
+            "version": "9.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Solr/ext-solr.git",
+                "reference": "628b3faa22dfa95ce563caf73e8549960e9a667c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/628b3faa22dfa95ce563caf73e8549960e9a667c",
+                "reference": "628b3faa22dfa95ce563caf73e8549960e9a667c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "solarium/solarium": "~4.2.0",
+                "typo3/cms-backend": "^8.7.0 || ^9.5.0",
+                "typo3/cms-core": "^8.7.0 || ^9.5.0",
+                "typo3/cms-extbase": "^8.7.0 || ^9.5.0",
+                "typo3/cms-fluid": "^8.7.0 || ^9.5.0",
+                "typo3/cms-frontend": "^8.7.0 || ^9.5.0",
+                "typo3/cms-reports": "^8.7.0 || ^9.5.0",
+                "typo3/cms-scheduler": "^8.7.0 || ^9.5.0",
+                "typo3/cms-tstemplate": "^8.7.0 || ^9.5.0"
+            },
+            "replace": {
+                "apache-solr-for-typo3/solrfluid": "*",
+                "typo3-ter/solr": "self.version"
+            },
+            "require-dev": {
+                "nimut/testing-framework": "^4.0.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.0.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "solr",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "Resources/Private/Php/"
+                ],
+                "psr-4": {
+                    "ApacheSolrForTypo3\\Solr\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ingo Renner",
+                    "role": "Lead Developer",
+                    "email": "ingo@typo3.org"
+                }
+            ],
+            "description": "Apache Solr for TYPO3",
+            "homepage": "http://www.typo3-solr.com",
+            "keywords": [
+                "TYPO3 CMS",
+                "search",
+                "solr",
+                "typo3"
+            ],
+            "time": "2019-03-06T12:19:56+00:00"
         },
         {
             "name": "bk2k/bootstrap-package",
@@ -1369,6 +1443,64 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "solarium/solarium",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solariumphp/solarium.git",
+                "reference": "20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d",
+                "reference": "20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/event-dispatcher": "^2.7 || ^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^3.8 || ^6.2",
+                "php-coveralls/php-coveralls": "^1.0",
+                "phpunit/phpunit": "^6.5",
+                "squizlabs/php_codesniffer": "^1.4",
+                "zendframework/zendframework": "^3.0"
+            },
+            "suggest": {
+                "minimalcode/search": "Query builder compatible with Solarium, allows simplified solr-query handling"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Solarium\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "See GitHub contributors",
+                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
+                }
+            ],
+            "description": "PHP Solr client",
+            "homepage": "http://www.solarium-project.org",
+            "keywords": [
+                "php",
+                "search",
+                "solr"
+            ],
+            "time": "2018-11-24T09:20:30+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.12",
             "source": {
@@ -1632,6 +1764,134 @@
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
             "time": "2019-07-24T17:13:59+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v4.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "212b020949331b6531250584531363844b34a94e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/212b020949331b6531250584531363844b34a94e",
+                "reference": "212b020949331b6531250584531363844b34a94e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/event-dispatcher-contracts": "^1.1"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "1.1"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/http-foundation": "^3.4|^4.0",
+                "symfony/service-contracts": "^1.1",
+                "symfony/stopwatch": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-06-27T06:42:14+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "c61766f4440ca687de1084a5c00b08e167a2575c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/c61766f4440ca687de1084a5c00b08e167a2575c",
+                "reference": "c61766f4440ca687de1084a5c00b08e167a2575c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "suggest": {
+                "psr/event-dispatcher": "",
+                "symfony/event-dispatcher-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-06-20T06:46:26+00:00"
         },
         {
             "name": "symfony/expression-language",
