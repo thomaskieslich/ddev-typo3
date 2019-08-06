@@ -4,9 +4,7 @@ nbproject
 
 # NODE/BOWER #
 node_modules
-bower_components
 
-/private
 /public
 /var
 /vendor
