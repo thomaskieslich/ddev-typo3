@@ -14,3 +14,11 @@ nfs_mount_enabled: false
 provider: default
 use_dns_when_possible: true
 timezone: "Europe/Berlin"
+
+hooks:
+  post-start:
+    - exec: sudo apt-get -y update
+    - exec: sudo chmod 0600 /etc/cron.d/typo3
+    - exec: sudo apt-get -y install --no-install-recommends cron
+    - exec: sudo apt-get -y clean
+    - exec: sudo service cron start

@@ -1,0 +1,2 @@
+# m h  dom mon dow  user  command
+*/1 * * * * root TYPO3_CONTEXT=Development/Local /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3 scheduler:run

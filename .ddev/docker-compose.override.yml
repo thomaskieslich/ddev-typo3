@@ -2,8 +2,12 @@ version: '3.6'
 
 services:
   web:
+    environment:
+      - TYPO3_CONTEXT=Development/Local
     volumes:
       # mount composer cache
       - ~/.composer/cache:/home/application/.composer/cache
-    environment:
-      - TYPO3_CONTEXT=Development/Local
+      # add php xdebug profile path
+      - ./data/php-profiles/:/tmp/debug/:delegated
+      # add crontab
+      - ./cron/typo3:/etc/cron.d/typo3
