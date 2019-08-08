@@ -9,5 +9,3 @@ services:
       - ~/.composer/cache:/home/application/.composer/cache
       # add php xdebug profile path
       - ./data/php-profiles/:/tmp/debug/:delegated
-      # add crontab
-      - ./cron/typo3:/etc/cron.d/typo3
