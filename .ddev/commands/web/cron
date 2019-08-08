@@ -1,7 +1,9 @@
 #!/bin/bash
 
-sudo apt-get -y update
-sudo apt-get -y install --no-install-recommends cron
-sudo apt-get -y clean
-sudo service cron start
+sudo apt-get -qq update
+sudo apt-get -qq install -y --no-install-recommends cron
+sudo apt-get -qq autoremove -y && sudo apt-get -qq clean -y
+
+sudo cp /mnt/ddev_config/cron/typo3 /etc/cron.d/typo3
 sudo chmod 0600 /etc/cron.d/typo3
+sudo service cron start
