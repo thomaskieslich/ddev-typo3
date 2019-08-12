@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tail -F /var/www/html/var/log/* >> /dev/stderr
