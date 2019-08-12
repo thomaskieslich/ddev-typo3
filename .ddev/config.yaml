@@ -1,4 +1,4 @@
-APIVersion: v1.10.1
+APIVersion: v1.10.2
 name: ddev-typo3
 type: typo3
 docroot: public
@@ -10,14 +10,14 @@ xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
 mariadb_version: "10.2"
-nfs_mount_enabled: false
+nfs_mount_enabled: true
 provider: default
 use_dns_when_possible: true
 timezone: Europe/Berlin
 
 
-# This config.yaml was created with ddev version v1.10.1 
-# webimage: drud/ddev-webserver:v1.10.0
+# This config.yaml was created with ddev version v1.10.2 
+# webimage: drud/ddev-webserver:v1.10.2
 # dbimage: drud/ddev-dbserver:v1.10.0-10.2
 # dbaimage: drud/phpmyadmin:v1.10.0
 # bgsyncimage: drud/ddev-bgsync:v1.10.0
