@@ -1,0 +1,3 @@
+#!/bin/bash
+
+TYPO3_CONTEXT=Development/Local ./typo3cms cleanup:updatereferenceindex
