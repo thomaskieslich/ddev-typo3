@@ -1,3 +1,0 @@
-hooks:
-  post-start:
-    - exec: while true; do sleep 60; /var/www/html/vendor/bin/typo3 scheduler:run; done
