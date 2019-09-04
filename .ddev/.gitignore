@@ -17,4 +17,5 @@
 /.dbimageBuild
 /*-build/Dockerfile.example
 
+/backup
 /data
