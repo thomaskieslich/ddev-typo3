@@ -21,7 +21,7 @@ services:
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
   phpmyadmin:
-    image: $DDEV_DBAIMAGE
+    image: phpmyadmin/phpmyadmin:4.9
     container_name: ddev-${DDEV_SITENAME}-phpmyadmin
     ports:
       - 8080:80
@@ -32,4 +32,4 @@ services:
       - VIRTUAL_HOST=$DDEV_HOSTNAME
       - TZ=Europe/Berlin
       # HTTP_EXPOSE allows for ports accepting HTTP traffic to be accessible from <site>.ddev.site:<port>
-#      - HTTP_EXPOSE=$DDEV_PHPMYADMIN_PORT:8036
+      - HTTP_EXPOSE=$DDEV_PHPMYADMIN_PORT:8080
