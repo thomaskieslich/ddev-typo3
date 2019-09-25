@@ -13,8 +13,6 @@
 /.sshimageBuild
 /.webimageExtra
 /.dbimageExtra
-/.webimageBuild
-/.dbimageBuild
 /*-build/Dockerfile.example
 
 /backup
