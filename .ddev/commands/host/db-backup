@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Backup db
+## Usage: db-backup
+## Example: "ddev db-backup"
+
+ddev export-db -f ./.ddev/backup/mysql-db.sql.gz
