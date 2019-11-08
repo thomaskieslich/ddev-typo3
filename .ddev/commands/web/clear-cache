@@ -1,3 +1,0 @@
-#!/bin/bash
-
-TYPO3_CONTEXT=Development/Local ./typo3cms cache:flush
