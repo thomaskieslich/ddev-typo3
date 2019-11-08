@@ -7,3 +7,9 @@ node_modules
 /public
 /var
 /vendor
+
+.ddev/backup/*
+!.ddev/backup/fileadmin.tar.gz
+!.ddev/backup/mysql-db.sql.gz
+
+.ddev/data/*
