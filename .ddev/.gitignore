@@ -1,4 +1,4 @@
-/backup
+/backup/*
 !/backup/fileadmin.tar.gz
 !/backup/mysql-db.sql.gz
 
