@@ -4,4 +4,6 @@
 ## Usage: db-backup
 ## Example: "ddev db-backup"
 
+mkdir -p ./.ddev/backup
+
 ddev export-db -f ./.ddev/backup/mysql-db.sql.gz

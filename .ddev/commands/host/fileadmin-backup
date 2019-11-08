@@ -4,4 +4,6 @@
 ## Usage: fileadmin-backup
 ## Example: "ddev fileadmin-backup"
 
+mkdir -p ./.ddev/backup
+
 tar -czvf ./.ddev/backup/fileadmin.tar.gz --exclude="_processed_" ./public/fileadmin

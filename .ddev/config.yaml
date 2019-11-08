@@ -16,10 +16,17 @@ webimage_extra_packages: [cron]
 use_dns_when_possible: true
 timezone: Europe/Berlin
 
+
 hooks:
   post-start:
-    - exec: echo '*/1 * * * * root TYPO3_CONTEXT=Development/Local /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3 scheduler:run' | sudo tee -a /etc/cron.d/typo3
+    - exec: echo '*/1 * * * * root TYPO3_CONTEXT=Development/Local /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3
+        scheduler:run' | sudo tee -a /etc/cron.d/typo3
     - exec: sudo chmod 0600 /etc/cron.d/typo3 && sudo service cron start
+    - exec-host: ddev open
+
+  pre-stop:
+    - exec-host: ddev db-backup
+    - exec-host: ddev fileadmin-backup
 
 
 # This config.yaml was created with ddev version v1.12.0-alpha1
