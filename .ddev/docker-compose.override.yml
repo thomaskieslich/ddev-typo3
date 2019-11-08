@@ -4,8 +4,7 @@ services:
   web:
     environment:
       - TYPO3_CONTEXT=Development/Local
+      - PHP_IDE_CONFIG=serverName=ddev-typo3.ddev.site
     volumes:
-      # mount composer cache
-      - ~/.composer/cache:/home/application/.composer/cache
       # add php xdebug profile path
       - ./data/php-profiles/:/tmp/debug/:delegated
