@@ -1,4 +1,4 @@
-APIVersion: v1.11.0
+APIVersion: v1.12.0-alpha1
 name: ddev-typo3
 type: typo3
 docroot: public
@@ -9,17 +9,16 @@ router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-mariadb_version: "10.2"
+mysql_version: "5.7"
 nfs_mount_enabled: true
 provider: default
-omit_containers: [db]
 use_dns_when_possible: true
 timezone: Europe/Berlin
 
 
-# This config.yaml was created with ddev version v1.11.0 
-# webimage: drud/ddev-webserver:v1.11.0
-# dbimage: drud/ddev-dbserver:v1.11.0-10.2
+# This config.yaml was created with ddev version v1.12.0-alpha1
+# webimage: drud/ddev-webserver:20191104_heddn_drush_node_version
+# dbimage: drud/ddev-dbserver-mariadb-10.2:20191007_many_mariadb
 # dbaimage: drud/phpmyadmin:v1.11.0
 # bgsyncimage: drud/ddev-bgsync:v1.11.0
 # However we do not recommend explicitly wiring these images into the
@@ -46,11 +45,17 @@ timezone: Europe/Berlin
 # dbaimage: <docker_image>
 # bgsyncimage: <docker_image>
 
+# mariadb_version and mysql_version
+# ddev can use many versions of mariadb and mysql
+# However these directives are mutually exclusive
+# mariadb_version: 10.2
+# mysql_version: 8.0
+
 # router_http_port: <port>  # Port to be used for http (defaults to port 80)
 # router_https_port: <port> # Port for https (defaults to 443)
 
 # xdebug_enabled: false  # Set to true to enable xdebug and "ddev start" or "ddev restart"
-# Note that for most people the commands 
+# Note that for most people the commands
 # "ddev exec enable_xdebug" and "ddev exec disable_xdebug" work better,
 # as leaving xdebug enabled all the time is a big performance hit.
 
@@ -58,7 +63,7 @@ timezone: Europe/Berlin
 
 # timezone: Europe/Berlin
 # This is the timezone used in the containers and by PHP;
-# it can be set to any valid timezone, 
+# it can be set to any valid timezone,
 # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # For example Europe/Dublin or MST7MDT
 
@@ -80,14 +85,14 @@ timezone: Europe/Berlin
 # working_dir:
 #   web: /var/www/html
 #   db: /home
-# would set the default working directory for the web and db services. 
-# These values specify the destination directory for ddev ssh and the 
-# directory in which commands passed into ddev exec are run. 
+# would set the default working directory for the web and db services.
+# These values specify the destination directory for ddev ssh and the
+# directory in which commands passed into ddev exec are run.
 
 # omit_containers: ["dba", "ddev-ssh-agent"]
 # would omit the dba (phpMyAdmin) and ddev-ssh-agent containers. Currently
 # only those two containers can be omitted here.
-# Note that these containers can also be omitted globally in the 
+# Note that these containers can also be omitted globally in the
 # ~/.ddev/global_config.yaml or with the "ddev config global" command.
 
 # nfs_mount_enabled: false
@@ -95,8 +100,8 @@ timezone: Europe/Berlin
 # See https://ddev.readthedocs.io/en/stable/users/performance/#using-nfs-to-mount-the-project-into-the-container
 
 # webcache_enabled: false (deprecated)
-# Was only for macOS, but now deprecated. 
-# See https://ddev.readthedocs.io/en/stable/users/performance/#using-webcache_enabled-to-cache-the-project-directory
+# Was only for macOS, but now deprecated.
+# See https://ddev.readthedocs.io/en/stable/users/performance/#webcache
 
 # host_https_port: "59002"
 # The host port binding for https can be explicitly specified. It is
@@ -127,8 +132,8 @@ timezone: Europe/Berlin
 # Extra Debian packages that are needed in the dbimage can be added here
 
 # use_dns_when_possible: true
-# If the host has internet access and the domain configured can 
-# successfully be looked up, DNS will be used for hostname resolution 
+# If the host has internet access and the domain configured can
+# successfully be looked up, DNS will be used for hostname resolution
 # instead of editing /etc/hosts
 # Defaults to true
 
@@ -139,13 +144,13 @@ timezone: Europe/Berlin
 # pre-v1.9 behavior.
 
 # ngrok_args: --subdomain mysite --auth username:pass
-# Provide extra flags to the "ngrok http" command, see 
+# Provide extra flags to the "ngrok http" command, see
 # https://ngrok.com/docs#http or run "ngrok http -h"
 
 # provider: default # Currently either "default" or "pantheon"
 #
-# Many ddev commands can be extended to run tasks before or after the 
-# ddev command is executed, for example "post-start", "post-import-db", 
+# Many ddev commands can be extended to run tasks before or after the
+# ddev command is executed, for example "post-start", "post-import-db",
 # "pre-composer", "post-composer"
 # See https://ddev.readthedocs.io/en/stable/users/extending-commands/ for more
 # information on the commands that can be extended and the tasks you can define
