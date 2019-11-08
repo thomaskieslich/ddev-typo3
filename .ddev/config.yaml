@@ -12,6 +12,7 @@ additional_fqdns: []
 mysql_version: "5.7"
 nfs_mount_enabled: true
 provider: default
+webimage_extra_packages: [cron]
 use_dns_when_possible: true
 timezone: Europe/Berlin
 

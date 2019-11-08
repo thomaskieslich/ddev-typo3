@@ -14,7 +14,7 @@
 /sequelpro.spf
 /import-db
 /.bgsync*
-/config.*.y*ml
+#/config.*.y*ml
 /.webimageBuild
 /.dbimageBuild
 /.bgsyncimageBuild
