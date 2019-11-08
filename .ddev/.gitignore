@@ -1,3 +1,9 @@
+/backup
+!/backup/fileadmin.tar.gz
+!/backup/mysql-db.sql.gz
+
+/data
+
 #ddev-generated: Automatically generated ddev .gitignore.
 # You can remove the above line if you want to edit and maintain this file yourself.
 
@@ -22,6 +28,3 @@
 /.webimageExtra
 /.dbimageExtra
 /*-build/Dockerfile.example
-
-/backup
-/data
