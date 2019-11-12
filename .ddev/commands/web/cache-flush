@@ -1,7 +1,0 @@
-#!/bin/bash
-
-## Description: clear TYPO3 cache
-## Usage: cache-flush
-## Example: "ddev cache-flush"
-
-TYPO3_CONTEXT=Development/Local ./typo3cms cache:flush

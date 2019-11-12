@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: run typo3 cli
+## Usage: typo3
+## Example: "ddev typo3"
+
+TYPO3_CONTEXT=Development/Local ./vendor/bin/typo3 $@

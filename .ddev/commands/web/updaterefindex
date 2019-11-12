@@ -1,7 +1,0 @@
-#!/bin/bash
-
-## Description: TYPO3 updatereferenceindex
-## Usage: updatereferenceindex
-## Example: "ddev updatereferenceindex"
-
-TYPO3_CONTEXT=Development/Local ./typo3cms cleanup:updatereferenceindex
