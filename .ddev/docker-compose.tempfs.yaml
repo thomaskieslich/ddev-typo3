@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  web:
+    environment:
+      DDEV_UID:
+      DDEV_GID:
+    volumes:
+      - type: tmpfs
+        target: /var/www/html/var/cache
+        tmpfs:
+          size: 268435456

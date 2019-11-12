@@ -17,10 +17,12 @@ hooks:
   - exec: echo '*/1 * * * * root TYPO3_CONTEXT=Development/Local /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3
       scheduler:run' | sudo tee -a /etc/cron.d/typo3
   - exec: sudo chmod 0600 /etc/cron.d/typo3 && sudo service cron start
-  - exec-host: ddev open
-  pre-stop:
-  - exec-host: ddev db-backup
-  - exec-host: ddev fileadmin-backup
+
+  - exec: bash -c "sudo chown -R ${DDEV_UID}:${DDEV_GID} /var/www/html/var/cache"
+#  - exec-host: ddev open
+#  pre-stop:
+#  - exec-host: ddev db-backup
+#  - exec-host: ddev fileadmin-backup
 webimage_extra_packages: [cron]
 use_dns_when_possible: true
 timezone: Europe/Berlin
