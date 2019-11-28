@@ -3,8 +3,7 @@ version: '3.6'
 services:
   web:
     environment:
-      - TYPO3_CONTEXT=Development
-      - PHP_IDE_CONFIG=serverName=ddev-typo3.ddev.site
+      - PHP_IDE_CONFIG=serverName=${DDEV_SITENAME}.ddev.site
     volumes:
       # add php xdebug profile path
       - ./php-profiles/:/tmp/debug/:delegated
