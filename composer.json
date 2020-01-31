@@ -12,7 +12,7 @@
     "platform": {
       "php": "7.2"
     },
-    "sort-packages": true
+    "sort-packages": false
   },
   "require": {
     "helhum/typo3-console": "^5.7",
