@@ -8,8 +8,8 @@ mv ./public/fileadmin ./public/fileadmin-org
 
 tar -xzvf ./.ddev/backup/fileadmin.tar.gz
 
-TYPO3_CONTEXT=Development/Local ./typo3cms cache:flush
+ddev typo3cms cache:flush
 
-TYPO3_CONTEXT=Development/Local ./typo3cms cleanup:updatereferenceindex
+ddev typo3cms cleanup:updatereferenceindex
 
 rm -rf ./public/fileadmin-org

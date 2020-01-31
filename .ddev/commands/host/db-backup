@@ -6,4 +6,6 @@
 
 mkdir -p ./.ddev/backup
 
+rm -f ./.ddev/backup/mysql-db.sql.gz
+
 ddev export-db -f ./.ddev/backup/mysql-db.sql.gz
