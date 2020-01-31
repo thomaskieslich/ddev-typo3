@@ -1,9 +1,10 @@
 APIVersion: v1.12.2
 name: ddev-typo3
-type: php
+type: typo3
 docroot: public
 php_version: "7.2"
 webserver_type: apache-fpm
+dbaimage: phpmyadmin/phpmyadmin:4.9.4
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
@@ -21,7 +22,6 @@ hooks:
 webimage_extra_packages: [cron]
 use_dns_when_possible: true
 timezone: Europe/Berlin
-dbaimage: phpmyadmin/phpmyadmin:4.9.4
 
 
 # This config.yaml was created with ddev version v1.12.2
@@ -164,3 +164,5 @@ dbaimage: phpmyadmin/phpmyadmin:4.9.4
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
 #hooks:
+#  post-start:
+#    - exec: composer install -d /var/www/html
