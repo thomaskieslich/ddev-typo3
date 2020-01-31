@@ -21,6 +21,7 @@ hooks:
 webimage_extra_packages: [cron]
 use_dns_when_possible: true
 timezone: Europe/Berlin
+dbaimage: phpmyadmin/phpmyadmin:4.9.4
 
 
 # This config.yaml was created with ddev version v1.12.2
