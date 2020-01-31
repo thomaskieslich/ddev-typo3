@@ -1,15 +1,28 @@
 .DS_Store
 .idea
+.vscode
+nbproject
+*.swp
 
+node_modules
 # NODE #
 node_modules
 
-/public
 /var
 /vendor
+
+/index.htm
+/composer.phar
 
 .ddev/backup/*
 !.ddev/backup/fileadmin.tar.gz
 !.ddev/backup/mysql-db.sql.gz
+.ddev/php-profiles/*
 
 .ddev/data/*
+
+/public/*
+!/public/typo3conf
+/public/typo3conf/*
+!/public/typo3conf/LocalConfiguration.php
+!/public/typo3conf/AdditionalConfiguration.php
