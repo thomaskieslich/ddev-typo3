@@ -1,6 +1,6 @@
-APIVersion: v1.12.0
+APIVersion: v1.12.2
 name: ddev-typo3
-type: typo3
+type: php
 docroot: public
 php_version: "7.2"
 webserver_type: apache-fpm
@@ -23,8 +23,8 @@ use_dns_when_possible: true
 timezone: Europe/Berlin
 
 
-# This config.yaml was created with ddev version v1.12.0
-# webimage: drud/ddev-webserver:v1.12.1
+# This config.yaml was created with ddev version v1.12.2
+# webimage: drud/ddev-webserver:v1.12.2
 # dbimage: drud/ddev-dbserver-mariadb-10.2:v1.12.0
 # dbaimage: drud/phpmyadmin:v1.12.0
 # bgsyncimage: drud/ddev-bgsync:v1.12.0
@@ -163,5 +163,3 @@ timezone: Europe/Berlin
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
 #hooks:
-#  post-start:
-#    - exec: composer install -d /var/www/html
