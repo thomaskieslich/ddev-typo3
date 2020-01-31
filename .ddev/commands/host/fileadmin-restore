@@ -4,12 +4,12 @@
 ## Usage: fileadmin-restore
 ## Example: "ddev fileadmin-restore"
 
-mv ./public/fileadmin ./public/fileadmin-org
+ddev exec mv ./public/fileadmin ./public/fileadmin-org
 
-tar -xzvf ./.ddev/backup/fileadmin.tar.gz
+ddev exec tar -xzvf ./.ddev/backup/fileadmin.tar.gz
 
 ddev typo3cms cache:flush
 
 ddev typo3cms cleanup:updatereferenceindex
 
-rm -rf ./public/fileadmin-org
+ddev exec rm -rf ./public/fileadmin-org
