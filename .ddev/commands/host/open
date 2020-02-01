@@ -1,19 +1,9 @@
 #!/bin/bash
 
-## Description: Open a browser with the current site
+## Description: Open a browser with the current site Backend
 ## Usage: open
 ## Example: "ddev open"
 
 BROWSER='Firefox Developer Edition'
 
-case $OSTYPE in
-  linux-gnu)
-    xdg-open ${DDEV_PRIMARY_URL}
-    ;;
-  "darwin"*)
-    open -a "${BROWSER}" ${DDEV_PRIMARY_URL}/typo3
-    ;;
-  "win*"* | "msys"*)
-    start ${DDEV_PRIMARY_URL}
-    ;;
-esac
+open -a "${BROWSER}" ${DDEV_PRIMARY_URL}/typo3
