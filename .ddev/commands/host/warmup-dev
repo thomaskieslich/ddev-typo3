@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+## Description: Cache warmup with sitemap.xml
+## Usage: warmup-dev
+## Example: "ddev warmup-de"
+
 domains=(
    https://ddev-typo3.ddev.site
 )
