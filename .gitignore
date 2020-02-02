@@ -5,8 +5,6 @@ nbproject
 *.swp
 
 node_modules
-# NODE #
-node_modules
 
 /var
 /vendor
