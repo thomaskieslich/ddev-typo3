@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: show TYPO3 logs
+## Usage: t3logs
+## Example: "ddev t3logs"
+
+tail -F /var/www/html/var/log/* >> /dev/stderr

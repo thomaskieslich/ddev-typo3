@@ -1,0 +1,9 @@
+#!/bin/bash
+
+## Description: Restore db
+## Usage: db-restore
+## Example: "ddev db-restore"
+
+ddev import-db --src=./.ddev/backup/mysql-db.sql.gz
+
+ddev typo3cms cleanup:updatereferenceindex

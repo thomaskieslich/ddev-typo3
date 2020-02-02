@@ -1,0 +1,11 @@
+#!/bin/bash
+
+## Description: Backup fileadmin folder
+## Usage: fileadmin-backup
+## Example: "ddev fileadmin-backup"
+
+ddev exec mkdir -p ./.ddev/backup
+
+ddev exec rm -f ./.ddev/backup/fileadmin.tar.gz
+
+ddev exec tar -czvf ./.ddev/backup/fileadmin.tar.gz --exclude="_processed_" ./public/fileadmin

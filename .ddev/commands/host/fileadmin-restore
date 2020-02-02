@@ -1,0 +1,15 @@
+#!/bin/bash
+
+## Description: Restore fileadmin folder
+## Usage: fileadmin-restore
+## Example: "ddev fileadmin-restore"
+
+ddev exec mv ./public/fileadmin ./public/fileadmin-org
+
+ddev exec tar -xzvf ./.ddev/backup/fileadmin.tar.gz
+
+ddev typo3cms cache:flush
+
+ddev typo3cms cleanup:updatereferenceindex
+
+ddev exec rm -rf ./public/fileadmin-org
