@@ -1,10 +1,9 @@
-APIVersion: v1.12.2
+APIVersion: v1.13.0
 name: ddev-typo3
 type: typo3
 docroot: public
 php_version: "7.2"
 webserver_type: apache-fpm
-dbaimage: phpmyadmin/phpmyadmin:4.9.4
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
@@ -15,16 +14,15 @@ nfs_mount_enabled: true
 provider: default
 hooks:
   post-start:
-  - exec: echo '*/1 * * * * root TYPO3_CONTEXT=Development/Local /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3
-      scheduler:run' | sudo tee -a /etc/cron.d/typo3
+  - exec: echo '*/1 * * * * root TYPO3_CONTEXT=Development/Local /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3 scheduler:run' | sudo tee -a /etc/cron.d/typo3
   - exec: sudo chmod 0600 /etc/cron.d/typo3 && sudo service cron start
 webimage_extra_packages: [cron]
 use_dns_when_possible: true
 timezone: Europe/Berlin
 
 
-# This config.yaml was created with ddev version v1.12.2
-# webimage: drud/ddev-webserver:v1.12.2
+# This config.yaml was created with ddev version v1.13.0
+# webimage: drud/ddev-webserver:v1.13.0
 # dbimage: drud/ddev-dbserver-mariadb-10.2:v1.12.0
 # dbaimage: drud/phpmyadmin:v1.12.0
 # bgsyncimage: drud/ddev-bgsync:v1.12.0
