@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## Description: lint given language / optional path to file
+## Usage: lint
+## Example: "ddev lint typoscript path/file"
+
+if [[ $1 == 'typoscript' ]] ; then
+      echo "lint TypoScript"
+      if [[ $2 ]] ; then
+        vendor/bin/typoscript-lint $2
+      else
+        vendor/bin/typoscript-lint
+      fi
+fi
