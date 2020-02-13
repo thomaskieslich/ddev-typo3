@@ -12,3 +12,12 @@ if [[ $1 == 'typoscript' ]] ; then
         vendor/bin/typoscript-lint
       fi
 fi
+
+if [[ $1 == 'phpcs' ]] ; then
+      echo "lphp code sniffer"
+      if [[ $2 ]] ; then
+        vendor/bin/phpcs $2
+      else
+        vendor/bin/phpcs public/typo3conf/ext/bootstrap_package/Classes
+      fi
+fi
