@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5e5366c700685ab9408aca9cca1b6b8",
+    "content-hash": "5178b68d9e01b136cfb7046a703a0fb0",
     "packages": [
         {
             "name": "bk2k/bootstrap-package",
@@ -3776,6 +3776,63 @@
             "time": "2020-02-25T12:50:09+00:00"
         },
         {
+            "name": "typo3/cms-dashboard",
+            "version": "v10.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/dashboard.git",
+                "reference": "1f48ebec21601c98c4858c4638f50aeff0543fbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/dashboard/zipball/1f48ebec21601c98c4858c4638f50aeff0543fbd",
+                "reference": "1f48ebec21601c98c4858c4638f50aeff0543fbd",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-backend": "10.3.0",
+                "typo3/cms-core": "10.3.0",
+                "typo3/cms-extbase": "10.3.0",
+                "typo3/cms-fluid": "10.3.0",
+                "typo3/cms-frontend": "10.3.0"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.3.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "dashboard",
+                    "Package": {
+                        "serviceProvider": "TYPO3\\CMS\\Dashboard\\ServiceProvider",
+                        "partOfFactoryDefault": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Dashboard\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dashboard for TYPO3.",
+            "homepage": "https://typo3.org",
+            "time": "2020-02-25T12:50:09+00:00"
+        },
+        {
             "name": "typo3/cms-extbase",
             "version": "v10.3.0",
             "source": {
@@ -5013,6 +5070,58 @@
             "time": "2020-02-25T12:50:09+00:00"
         },
         {
+            "name": "typo3/cms-sys-note",
+            "version": "v10.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/sys_note.git",
+                "reference": "2a6fe1665410a8160dae1e8c483c4e8a10930fa1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/sys_note/zipball/2a6fe1665410a8160dae1e8c483c4e8a10930fa1",
+                "reference": "2a6fe1665410a8160dae1e8c483c4e8a10930fa1",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "10.3.0"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.3.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "sys_note"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\SysNote\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Records with messages which can be placed on any page and contain instructions or other information related to a page or section.",
+            "homepage": "https://typo3.org",
+            "time": "2020-02-25T12:50:09+00:00"
+        },
+        {
             "name": "typo3/cms-t3editor",
             "version": "v10.3.0",
             "source": {
@@ -5165,6 +5274,58 @@
                 }
             ],
             "description": "Shows the frontend webpage inside the backend frameset.",
+            "homepage": "https://typo3.org",
+            "time": "2020-02-25T12:50:09+00:00"
+        },
+        {
+            "name": "typo3/cms-workspaces",
+            "version": "v10.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/workspaces.git",
+                "reference": "d5f823ceeee21106a32a277c5bc39713beccee26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/workspaces/zipball/d5f823ceeee21106a32a277c5bc39713beccee26",
+                "reference": "d5f823ceeee21106a32a277c5bc39713beccee26",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "10.3.0"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "replace": {
+                "typo3/cms-version": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.3.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "workspaces"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Workspaces\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds workspaces functionality with custom stages to TYPO3.",
             "homepage": "https://typo3.org",
             "time": "2020-02-25T12:50:09+00:00"
         },

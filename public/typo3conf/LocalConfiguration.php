@@ -1,24 +1,27 @@
 <?php
 return [
     'BE' => [
-        'debug' => true,
+        'debug' => false,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$argon2i$v=19$m=16384,t=16,p=2$OVlKVDlTWmZZZDdrRmk0Sw$9X9RZyqwRWCN/fVRaDsBzbpfNFC96vl4D93QUzfomz8',
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=2$WFhxZWg0QlNUY2ZZWjRKVg$dtSkx86W4r8jvqNYFsTbWeuk4rXbQSN3e598Le2nRuE',
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Pbkdf2PasswordHash',
             'options' => [],
         ],
     ],
     'DB' => [
         'Connections' => [
             'Default' => [
-                'charset' => 'utf8',
+                'charset' => 'utf8mb4',
                 'driver' => 'mysqli',
+                'tableoptions' => [
+                    'charset' => 'utf8mb4',
+                    'collate' => 'utf8mb4_unicode_ci',
+                ],
             ],
         ],
     ],
-    'EXT' => [],
     'EXTCONF' => [
         'lang' => [
             'availableLanguages' => [
@@ -77,10 +80,9 @@ return [
         ],
     ],
     'FE' => [
-        'debug' => true,
-        'loginSecurityLevel' => 'normal',
+        'debug' => false,
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Pbkdf2PasswordHash',
             'options' => [],
         ],
     ],
@@ -102,11 +104,48 @@ return [
         'transport_smtp_username' => '',
     ],
     'SYS' => [
-        'devIPmask' => '*',
-        'displayErrors' => 1,
-        'encryptionKey' => '2167415ca12730494bdd1c6928ad264ae1c5a2899e155be6f026ed8c1f0d76d2a8d369cae78124f53cdb731e473318c6',
-        'exceptionalErrors' => 12290,
+        'caching' => [
+            'cacheConfigurations' => [
+                'hash' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'imagesizes' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+                'pages' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+                'pagesection' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+                'rootline' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'options' => [
+                        'compression' => 1,
+                    ],
+                ],
+            ],
+        ],
+        'devIPmask' => '',
+        'displayErrors' => 0,
+        'encryptionKey' => '96d1e6895981cf58d69df3143b9e020e4835fa61cedd46394edb682f6471b78dc32a93fe417e768fb4647a8b2c119227',
+        'exceptionalErrors' => 4096,
         'features' => [
+            'felogin.extbase' => true,
+            'fluidBasedPageModule' => true,
+            'form.legacyUploadMimeTypes' => true,
+            'rearrangedRedirectMiddlewares' => true,
+            'redirects.hitCount' => false,
+            'security.frontend.keepSessionDataOnLogout' => false,
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'New TYPO3 site',
