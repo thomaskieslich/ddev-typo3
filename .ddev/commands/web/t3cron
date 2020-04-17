@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 ## Description: Run typo3 scheduler:run on every minute
-## Usage: cron
-## Example: "ddev cron"
+## Usage: t3cron
+## Example: "ddev t3cron"
 
 while true
 do
   sleep 60
   /var/www/html/public/typo3/sysext/core/bin/typo3 scheduler:run
-  echo 'cron done'
+  echo 't3cron run'
 done
