@@ -23,6 +23,9 @@ return [
         ],
     ],
     'EXTCONF' => [
+        'helhum-typo3-console' => [
+            'initialUpgradeDone' => '10.3',
+        ],
         'lang' => [
             'availableLanguages' => [
                 'de',
@@ -37,6 +40,9 @@ return [
             'loginFootnote' => '',
             'loginHighlightColor' => '',
             'loginLogo' => '',
+        ],
+        'blog' => [
+            'disablePageLayoutHeader' => '0',
         ],
         'bootstrap_package' => [
             'disableCssProcessing' => '0',

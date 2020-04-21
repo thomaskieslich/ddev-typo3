@@ -44,3 +44,4 @@ languages:
     flag: de
 rootPageId: 1
 routes: {  }
+websiteTitle: ''
