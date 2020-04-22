@@ -16,7 +16,6 @@
   },
   "require": {
     "helhum/typo3-console": "^6.0",
-    "t3g/blog": "dev-master",
     "typo3/cms-about": "^10.4",
     "typo3/cms-backend": "^10.4",
     "typo3/cms-belog": "^10.4",

@@ -3,7 +3,7 @@ return [
     'BE' => [
         'debug' => false,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=2$WFhxZWg0QlNUY2ZZWjRKVg$dtSkx86W4r8jvqNYFsTbWeuk4rXbQSN3e598Le2nRuE',
+        'installToolPassword' => '$pbkdf2-sha256$25000$iEiCDKw0GZiRkCYVgxaGtg$WFhXL8GfktF8l8kpR/g4T9ubo/okTif7tmoOiEkwMsM',
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Pbkdf2PasswordHash',
@@ -40,9 +40,6 @@ return [
             'loginFootnote' => '',
             'loginHighlightColor' => '',
             'loginLogo' => '',
-        ],
-        'blog' => [
-            'disablePageLayoutHeader' => '0',
         ],
         'bootstrap_package' => [
             'disableCssProcessing' => '0',

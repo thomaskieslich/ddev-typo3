@@ -12,7 +12,6 @@ mysql_version: "5.7"
 provider: default
 use_dns_when_possible: true
 timezone: Europe/Berlin
-disable_settings_management: true
 
 
 # This config.yaml was created with ddev version v1.14.0

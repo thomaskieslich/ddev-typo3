@@ -1,5 +1,23 @@
 # ddev-typo3
 
+## Install
+ddev start
+ddev composer i
+ddev db-restore
+ddev fileadmin-restore
+
+ddev open 
+or 
+ddev open -t
+
+## Logins
+TYPO3 Login
+dev-admin : admin123
+Intalltool: admin123
+
+
+
+
 ## cron
 
 You can Start cron on every Start with this code in a config.cron.yml.
