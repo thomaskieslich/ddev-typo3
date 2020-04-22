@@ -1,9 +1,48 @@
 #!/bin/bash
-
-## Description: Open a browser with the current site Backend
+## Description: Open your browser with the current site With Options
 ## Usage: open
 ## Example: "ddev open"
 
+FULLURL=${DDEV_PRIMARY_URL}
+HTTPS=""
+if [ ${DDEV_PRIMARY_URL%://*} = "https" ]; then HTTPS=true; fi
+
 BROWSER='Firefox Developer Edition'
 
-open -a "${BROWSER}" ${DDEV_PRIMARY_URL}/typo3
+while :; do
+    case $1 in
+    -h | -\? | --help)
+        show_help
+        exit
+        ;;
+    -p | --phpmyadmin)
+        FULLURL="${DDEV_PRIMARY_URL}:${DDEV_PHPMYADMIN_HTTPS_PORT}"
+        ;;
+    -m | --mailhog)
+        FULLURL="${DDEV_PRIMARY_URL}:${DDEV_MAILHOG_HTTPS_PORT}"
+        ;;
+    -t | --typo3)
+        FULLURL="${DDEV_PRIMARY_URL}/typo3"
+        ;;
+    --) # End of all options.
+        shift
+        break
+        ;;
+    -?*)
+        printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
+        ;;
+    *) # Default case: No more options, so break out of the loop.
+        break ;;
+    esac
+
+    shift
+done
+
+if [ -n "${1:-}" ]; then
+    if [[ ${1::1} != "/" ]]; then
+        FULLURL="${FULLURL}/"
+    fi
+    FULLURL="${FULLURL}${1}"
+fi
+
+open -a "${BROWSER}" ${FULLURL}
