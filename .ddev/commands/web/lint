@@ -1,0 +1,78 @@
+#!/bin/bash
+
+## Description: lint given language / optional path to file
+## Usage: lint
+## Example: "ddev lint typoscript path/file"
+## for yaml 'brew install yamllint'
+
+PATH_SITEPACKAGE='./packages/sitepackage'
+
+lint_typoscript() {
+    echo "lint TypoScript"
+    vendor/bin/typoscript-lint
+}
+
+lint_scss() {
+    echo "lint SCSS"
+    cd $PATH_SITEPACKAGE/Build
+    npx stylelint $PATH_SITEPACKAGE/Build/scss '**/*.scss'
+    cd ./../../..
+}
+
+lint_js() {
+    echo "lint JavaScript"
+    cd $PATH_SITEPACKAGE/Build
+    npx eslint js/**/*
+    cd ./../../..
+}
+
+lint_yaml() {
+    echo "lint yaml"
+    yamllint -d relaxed $PATH_SITEPACKAGE/Configuration/Yaml/**/*
+    yamllint -d relaxed ./config/sites/**/*
+}
+
+lint_php() {
+    echo "lint php"
+    vendor/bin/phploc --count-tests $PATH_SITEPACKAGE/Classes
+    vendor/bin/parallel-lint $PATH_SITEPACKAGE
+    vendor/bin/phpcs -s -p --colors --extensions=php --standard=PSR2 $PATH_SITEPACKAGE
+    vendor/bin/php-cs-fixer fix --config .php_cs $PATH_SITEPACKAGE
+    vendor/bin/phpstan analyse --level 4 $PATH_SITEPACKAGE/Classes
+}
+
+if [[ $1 == 'all' ]]; then
+    lint_typoscript
+    lint_scss
+    lint_js
+    lint_yaml
+    lint_php
+fi
+
+if [[ $1 == 'typoscript' ]]; then
+    if [[ $2 ]]; then
+        lint_typoscript $2
+    else
+        lint_typoscript
+    fi
+fi
+
+if [[ $1 == 'scss' ]]; then
+    lint_scss
+fi
+
+if [[ $1 == 'js' ]]; then
+    lint_js
+fi
+
+if [[ $1 == 'yaml' ]]; then
+    if [[ $2 ]]; then
+        yamllint -d relaxed $2
+    else
+        lint_yaml
+    fi
+fi
+
+if [[ $1 == 'php' ]]; then
+    lint_php
+fi

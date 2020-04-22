@@ -1,0 +1,28 @@
+# The paths to lint
+paths:
+  - ./public/typo3conf/ext/bootstrap_package/Configuration/TypoScript/*
+
+filePatterns:
+  - "*.typoscript"
+
+#excludePatterns:
+#  - "Constants.typoscript"
+
+sniffs:
+  - class: Indentation
+    parameters:
+      useSpaces: true
+      indentPerLevel: 4
+      indentConditions: true
+  - class: DeadCode
+    disabled: false
+  - class: OperatorWhitespace
+  - class: RepeatingRValue
+    parameters:
+      allowedRightValues:
+        - "TYPO3\\CMS\\Frontend\\DataProcessing\\DatabaseQueryProcessor"
+  - class: DuplicateAssignment
+  - class: EmptySection
+  - class: NestingConsistency
+    parameters:
+      commonPathPrefixThreshold: 2

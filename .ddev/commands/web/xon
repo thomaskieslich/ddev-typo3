@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: enable xdebug
+## Usage: xon
+## Example: "ddev xon"
+
+enable_xdebug

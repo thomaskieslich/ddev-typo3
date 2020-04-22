@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: disable xdebug
+## Usage: xoff
+## Example: "ddev xoff"
+
+disable_xdebug
