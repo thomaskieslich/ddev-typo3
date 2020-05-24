@@ -15,9 +15,6 @@ TYPO3 Login
 dev-admin : admin123
 Intalltool: admin123
 
-
-
-
 ## cron
 
 You can Start cron on every Start with this code in a config.cron.yml.
