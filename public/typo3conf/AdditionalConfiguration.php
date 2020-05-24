@@ -1,6 +1,26 @@
 <?php
 
-if (getenv('IS_DDEV_PROJECT') == 'true') {
+$GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
+    $GLOBALS['TYPO3_CONF_VARS'],
+    [
+        'BE' => [
+            'installToolPassword' => '',
+        ],
+        'DB' => [
+            'Connections' => [
+                'Default' => [
+                    'dbname' => 'dbname',
+                    'host' => '127.0.0.1',
+                    'password' => 'password',
+                    'port' => '3306',
+                    'user' => 'user',
+                ],
+            ],
+        ],
+    ]
+);
+
+if (getenv('IS_DDEV_PROJECT') === 'true') {
     $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
         $GLOBALS['TYPO3_CONF_VARS'],
         [
