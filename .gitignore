@@ -6,6 +6,7 @@ nbproject
 
 node_modules
 
+/config
 /var
 /vendor
 
@@ -23,4 +24,3 @@ node_modules
 !/public/typo3conf
 /public/typo3conf/*
 !/public/typo3conf/LocalConfiguration.php
-!/public/typo3conf/AdditionalConfiguration.php
