@@ -14,9 +14,9 @@ use_dns_when_possible: true
 timezone: Europe/Berlin
 
 
-# This config.yaml was created with ddev version v1.14.0
-# webimage: drud/ddev-webserver:v1.14.0
-# dbimage: drud/ddev-dbserver-mariadb-10.2:v1.14.0
+# This config.yaml was created with ddev version v1.14.2
+# webimage: drud/ddev-webserver:v1.14.2
+# dbimage: drud/ddev-dbserver-mariadb-10.2:v1.14.1
 # dbaimage: phpmyadmin/phpmyadmin:5
 # However we do not recommend explicitly wiring these images into the
 # config.yaml as they may break future versions of ddev.
@@ -112,7 +112,7 @@ timezone: Europe/Berlin
 # unless explicitly specified.
 
 # phpmyadmin_port: "8036"
-# phpmyadmin_https_port: "8037{"
+# phpmyadmin_https_port: "8037"
 # The PHPMyAdmin ports can be changed from the default 8036 and 8037
 
 # mailhog_port: "8025"
