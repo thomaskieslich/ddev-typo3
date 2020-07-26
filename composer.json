@@ -16,6 +16,7 @@
   },
   "require": {
     "helhum/typo3-console": "^6.0",
+    "phpdocumentor/reflection-docblock": "5.1.0",
     "typo3/cms-about": "^10.4",
     "typo3/cms-backend": "^10.4",
     "typo3/cms-belog": "^10.4",
