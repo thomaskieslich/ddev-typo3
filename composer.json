@@ -16,7 +16,6 @@
   },
   "require": {
     "helhum/typo3-console": "^6.0",
-    "phpdocumentor/reflection-docblock": "5.1.0",
     "typo3/cms-about": "^10.4",
     "typo3/cms-backend": "^10.4",
     "typo3/cms-belog": "^10.4",
@@ -33,6 +32,7 @@
     "typo3/cms-form": "^10.4",
     "typo3/cms-frontend": "^10.4",
     "typo3/cms-impexp": "^10.4",
+    "typo3/cms-indexed-search": "^10.4",
     "typo3/cms-info": "^10.4",
     "typo3/cms-install": "^10.4",
     "typo3/cms-introduction": "^4.2",
@@ -54,12 +54,13 @@
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.16",
     "helmich/typo3-typoscript-lint": "^2.1",
-    "php-parallel-lint/php-parallel-lint": "^1.0",
-    "phploc/phploc": "^5.0",
+    "php-parallel-lint/php-parallel-lint": "^1.2",
+    "phploc/phploc": "^6.0",
     "phpmd/phpmd": "^2.8",
-    "phpstan/phpstan": "^0.12.11",
+    "phpstan/phpstan": "^0.12",
     "squizlabs/php_codesniffer": "^3.5",
-    "typo3/cms-adminpanel": "^10.4"
+    "typo3/cms-adminpanel": "^10.4",
+    "undefined/translate-locallang": "^2.7"
   },
   "scripts": {
     "typo3-cms-scripts": [
