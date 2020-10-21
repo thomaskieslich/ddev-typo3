@@ -1,15 +1,13 @@
 #!/bin/bash
 
-## Description: Restore fileadmin folder
+## Description: Restore fileadmin folder from .ddev/backup/fileadmin.tar.gz
 ## Usage: fileadmin-restore
 ## Example: "ddev fileadmin-restore"
 
-ddev exec mv ./public/fileadmin ./public/fileadmin-org
+set -x
 
-ddev exec tar -xzvf ./.ddev/backup/fileadmin.tar.gz
+mv ./public/fileadmin ./public/fileadmin-org
 
-ddev typo3cms cache:flush
+tar -xzvf ./.ddev/backup/fileadmin.tar.gz
 
-ddev typo3cms cleanup:updatereferenceindex
-
-ddev exec rm -rf ./public/fileadmin-org
+rm -rf ./public/fileadmin-org

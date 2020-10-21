@@ -1,0 +1,16 @@
+#!/bin/bash
+
+## Description: run npm in web container with parmeters
+## Usage: npm-web
+## Example: "ddev npm-web run dev or ddev npm-web install"
+
+cd /var/www/html/packages/sitepackage/Build
+
+if [[ -z "$1" ]] ; then
+      echo "list npm Scripts"
+      npm run
+  else
+    npm $@
+fi
+
+bash

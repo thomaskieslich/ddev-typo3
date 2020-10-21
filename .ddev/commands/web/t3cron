@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 ## Description: Run typo3 scheduler:run on every minute
 ## Usage: t3cron
