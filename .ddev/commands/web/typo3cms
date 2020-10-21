@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Description: run typo3cms (typo3 console) in cli
+## Description: run typo3cms (TYPO3 Console) cli Development/Local Context
 ## Usage: typo3cms
 ## Example: "ddev typo3cms"
 

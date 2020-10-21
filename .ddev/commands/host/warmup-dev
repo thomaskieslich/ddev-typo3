@@ -1,11 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-## Description: Cache warmup with sitemap.xml
+## Description: run over all pages in sitemap.xml
 ## Usage: warmup-dev
-## Example: "ddev warmup-de"
+## Example: "ddev warmup-dev"
 
 domains=(
-   https://ddev-typo3.ddev.site
+   https://t3base.ddev.site
+   https://t3base.ddev.site/en
 )
 
 function get {

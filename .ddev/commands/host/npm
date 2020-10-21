@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## Description: run npm cli on Host with parmeters
+## Usage: npm
+## Example: "ddev npm run dev or ddev npm install"
+
+cd ./packages/sitepackage/Build
+
+if [[ -z "$1" ]] ; then
+      echo "list npm Scripts"
+      npm run
+  else
+    npm $@
+fi

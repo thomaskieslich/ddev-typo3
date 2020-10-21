@@ -1,6 +1,13 @@
 base: /
-baseVariants: {  }
-errorHandling: {  }
+baseVariants:
+  -
+    base: 'https://ddev-typo3.ddev.site/'
+    condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=5'
 languages:
   -
     title: English
@@ -14,6 +21,7 @@ languages:
     hreflang: en-US
     direction: ''
     flag: us
+    websiteTitle: ''
   -
     title: Dansk
     enabled: true
@@ -43,5 +51,14 @@ languages:
     fallbacks: '1,0'
     flag: de
 rootPageId: 1
-routes: {  }
-websiteTitle: ''
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      sitemap.xml: 1533906435
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\n"
+websiteTitle: 'DDEV TYPO3 Demo'

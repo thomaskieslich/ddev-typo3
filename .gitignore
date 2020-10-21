@@ -17,10 +17,11 @@ node_modules
 !.ddev/backup/mysql-db.sql.gz
 .ddev/php-profiles/*
 
-.ddev/data/*
-
 /public/*
 !/public/typo3conf
 /public/typo3conf/*
-!/public/typo3conf/LocalConfiguration.php
+
+## !!! Change for Production (Toggle Comments)
+#/config/*
 !/public/typo3conf/AdditionalConfiguration.php
+!/public/typo3conf/LocalConfiguration.php

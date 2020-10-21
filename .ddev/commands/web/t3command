@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Description: run typo3 console command with Debug Mode
+## Usage: t3command
+## Example: "ddev t3command upgrade:run debug"
+
+if [[ $2 == "debug" ]]; then
+  echo "debug $1"
+  PHP_IDE_CONFIG=serverName=lzpb-10x.ddev.site XDEBUG_CONFIG=idekey=PHPSTORM TYPO3_CONTEXT=Development ./vendor/bin/typo3 $1
+else
+  TYPO3_CONTEXT=Development/Local ./vendor/bin/typo3 $1
+fi
